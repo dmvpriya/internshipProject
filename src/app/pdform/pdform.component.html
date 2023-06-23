@@ -1,0 +1,87 @@
+<html><body>
+    <div class="container">
+      <div class="title">Profile Details Updation</div>
+      <div class="content">
+        <form [formGroup]="sampleform">
+          <!-- <img src="assets/Angular.png" alt="" class="center"> -->
+          <div class="user-details">
+            <div class="input-box">
+                <span class="details">First Name</span>
+                <input type="text" formControlName="firstName" placeholder="Enter your First name" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Last Name</span>
+                <input type="text" formControlName="lastName" placeholder="Enter your Last name" required>
+              </div>
+  
+            <div class="input-box">
+              <span class="details">Phone Number</span>
+              <input type="text" formControlName="phoneNo" placeholder="Enter your mobile Number" required>
+            </div>
+            
+            <div class="input-box">
+              <span class="details">Year Of Passing</span>
+              <input type="text" formControlName = "yearOfPassing" placeholder="Enter yearOfPassing" required>
+            </div>
+            <!-- <div class="input-box">
+              <span class="details">Image Upload</span>              
+                <input type="file" class="file-input" formControlName = "image" (change)="onFileSelected($event)" #fileUpload>              
+            </div> -->
+            <div class="input-box">
+              <span class="details">Experience</span>
+              <select formControlName="Experience"  style="width: 100px; height: 33px;
+              margin: 2px;">
+                  <option value="0">0 years</option>
+                  <option value="1">1 year</option>
+                  <option value="2">2 years</option>
+                  <option value="3">3 years</option>
+                  <option value="4">4 years</option>
+                  <option value="5">5 years</option>
+                </select>
+            </div>
+            <div class="input-box">
+              <span class="details">Gender</span>
+              <input type="radio" formControlName = "gender" name="gender" value="male" checked style="height:15px; width:15px; vertical-align: middle;">Male
+              <input type="radio" formControlName = "gender" name="gender" value="female" checked style="height:15px; width:15px; vertical-align: middle;">Female      
+              
+            </div>
+            <div class="input-box">
+              <span class="details">Address</span>
+              <textarea style="width: 200px; height: 30px;" placeholder="Enter your address"  formControlName="address" ></textarea>
+            </div>
+            <div class="input-box">
+              <span class="details">Email</span>
+              <input type="text" placeholder="Enter your Email" required formControlName = "email">
+            </div>
+            <!-- <div class="input-box">
+              <span class="details">Education</span>
+              <textarea placeholder="Enter your education" required></textarea>
+            </div> -->
+            
+              <!-- <div class="input-skills">                
+                <table><tr><td>
+                  <span class="details">Skills</span></td>
+                  <td style="border-spacing: 30px; padding: 50px;">
+              <input type="checkbox" name="Java">Java 
+              <input type="checkbox" name="Python">Python <br>
+              <input type="che ckbox" name="HTML">HTML 
+              <input type="checkbox" name="CSS">CSS <br>
+              <input type="checkbox" name="JavaScript">JavaScript 
+              <input type="checkbox" name="Angular JS">Angular JS <br>
+                  
+          </td> 
+          
+          </tr>
+        </table>
+              </div>    -->
+            
+          </div>
+          <div class="button">
+            <input type="submit" value="Submit"(click) = "onSubmit()">
+          </div>
+          
+        </form>
+      </div>
+    </div>
+  </body>
+  </html>
